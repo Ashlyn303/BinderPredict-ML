@@ -1,23 +1,3 @@
-import sys
-import streamlit as st
-import torch
-import torch.nn as nn
-import os
-import joblib
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from Bio.SeqUtils.ProtParam import ProteinAnalysis
-from src.data_loader import DeviationFeatureEncoder, build_reference_forms
-from src.esm_feature_extractor import ESMFeatureExtractor
-import py3Dmol
-from stmol import showmol
-
-# Shim to fix legacy joblib imports from before directory restructuring
-sys.modules['data_loader'] = sys.modules['src.data_loader']
-sys.modules['esm_feature_extractor'] = sys.modules['src.esm_feature_extractor']
-
 # =============================================================================
 # APP CONFIGURATION & MODELS
 # =============================================================================
