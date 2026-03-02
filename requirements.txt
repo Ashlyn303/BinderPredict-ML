@@ -9,7 +9,8 @@ pandas
 numpy
 matplotlib
 streamlit
-st-molstar
+stmol
 py3Dmol
+biopython
 plotly
 scipy
