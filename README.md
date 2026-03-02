@@ -19,7 +19,7 @@ This repository contains a professional-grade Deep Learning pipeline for predict
   - `train_pytorch.py`: Main training script for the MLP model.
   - `hyperparameter_tune_advanced.py`: Bayesian hyperparameter tuning with Optuna.
   - `plot_diagnostics_pytorch.py`: Evaluation metrics and residual analysis.
-- `dashboard_app.py`: Interactive Streamlit dashboard for real-time prediction and exploration.
+- `streamlit_app.py`: Interactive Streamlit dashboard for real-time prediction and exploration.
 - `assets/docs/`: Visual assets used in this documentation.
 
 ## Model Performance & Diagnostics
@@ -56,7 +56,7 @@ We identify specific sequences where the model deviates most from the actual val
 
 2. **Run the Dashboard**:
    ```bash
-   streamlit run dashboard_app.py
+   streamlit run streamlit_app.py
    ```
 
 3. **Run Training (from root)**:

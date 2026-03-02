@@ -14,7 +14,7 @@ Make sure the latest model files (in `pytorch_results/`, etc.) are tracked and p
 1. On your Streamlit Dashboard, click **"New app"**.
 2. **Repository**: Select `Ashlyn303/BinderPredict-ML`.
 3. **Branch**: `main`.
-4. **Main file path**: `dashboard_app.py`.
+3. **Main file path**: `streamlit_app.py`.
 5. Click **"Deploy!"**.
 
 ## Step 4: Access & Share
