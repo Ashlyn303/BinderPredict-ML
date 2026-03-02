@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import SelectKBest, f_regression
 from sklearn.preprocessing import StandardScaler
-from src.data_loader import ProteinDataLoader, SequenceAnalyzer, DeviationFeatureEncoder, build_reference_forms
-from src.esm_feature_extractor import ESMFeatureExtractor
+from data_loader import ProteinDataLoader, SequenceAnalyzer, DeviationFeatureEncoder, build_reference_forms
+from esm_feature_extractor import ESMFeatureExtractor
 import joblib
 
 # =============================================================================

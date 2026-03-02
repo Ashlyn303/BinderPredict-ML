@@ -8,8 +8,8 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from src.data_loader import ProteinDataLoader
-from src.esm_feature_extractor import ESMFeatureExtractor
+from data_loader import ProteinDataLoader
+from esm_feature_extractor import ESMFeatureExtractor
 import joblib
 
 # =============================================================================

@@ -10,7 +10,7 @@ import shap
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import SelectKBest, f_regression
-from src.data_loader import ProteinDataLoader, SequenceAnalyzer, DeviationFeatureEncoder, build_reference_forms
+from data_loader import ProteinDataLoader, SequenceAnalyzer, DeviationFeatureEncoder, build_reference_forms
 
 # =============================================================================
 # CONFIGURATION
