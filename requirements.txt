@@ -9,6 +9,7 @@ pandas
 numpy
 matplotlib
 streamlit
+altair<5
 stmol
 py3Dmol
 biopython
