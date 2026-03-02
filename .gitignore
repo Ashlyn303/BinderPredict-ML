@@ -15,14 +15,18 @@ Thumbs.db
 # Weights & Biases
 wandb/
 
-# Data and Results (Large files)
-esm_results/
-hybrid_results/
-pytorch_results/
-model_comparison/
-AF2_WildTypeEpitope/
+# --- TRACKED MODELS & RESULTS ---
+# Allow essential files for the Dashboard to work on Streamlit Cloud
+!pytorch_results/
+!esm_results/
+!hybrid_results/
+!model_comparison/
+!AF2_WildTypeEpitope/
 
-# Local configuration
+# Exclude temporary or large log files inside results if any
+*/.DS_Store
+
+# --- IGNORED LOCAL CONFIG & DATA ---
 best_hyperparameters.json
 
 # Environment
