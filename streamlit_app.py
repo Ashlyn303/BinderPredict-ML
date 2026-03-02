@@ -1,15 +1,27 @@
+import sys
+import os
+
+# Robust shim for legacy joblib imports from before directory restructuring
+# This MUST happen before joblib tries to unpickle anything
+try:
+    from src import data_loader, esm_feature_extractor
+    sys.modules['data_loader'] = data_loader
+    sys.modules['esm_feature_extractor'] = esm_feature_extractor
+except ImportError:
+    # Fallback for local development if src is not reachable normally
+    pass
+
 import streamlit as st
 import torch
 import torch.nn as nn
-import os
 import joblib
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
-from data_loader import DeviationFeatureEncoder, build_reference_forms
-from esm_feature_extractor import ESMFeatureExtractor
+from src.data_loader import DeviationFeatureEncoder, build_reference_forms
+from src.esm_feature_extractor import ESMFeatureExtractor
 import py3Dmol
 from stmol import showmol
 
