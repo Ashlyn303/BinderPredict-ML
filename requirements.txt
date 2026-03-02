@@ -8,8 +8,7 @@ scikit-learn
 pandas
 numpy
 matplotlib
-streamlit
-altair<5
+streamlit>=1.35.0
 stmol
 py3Dmol
 biopython
