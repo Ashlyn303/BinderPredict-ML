@@ -8,8 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
-from src.data_loader import DeviationFeatureEncoder, build_reference_forms
-from src.esm_feature_extractor import ESMFeatureExtractor
+from data_loader import DeviationFeatureEncoder, build_reference_forms
+from esm_feature_extractor import ESMFeatureExtractor
 import py3Dmol
 from stmol import showmol
 
