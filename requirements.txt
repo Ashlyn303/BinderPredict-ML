@@ -13,6 +13,8 @@ matplotlib
 streamlit>=1.35.0
 stmol
 py3Dmol
+ipywidgets
+ipython_genutils
 biopython
 plotly
 scipy
