@@ -104,45 +104,32 @@ def load_resources(model_type='manual'):
     """Loads model and preprocessing joblibs."""
     try:
         # Encoder and Selector are shared by Manual and Hybrid
-        print(f"Loading resources for {model_type}...")
         encoder = joblib.load(os.path.join(PYTORCH_DIR, 'encoder.joblib'))
-        print("Encoder loaded")
         selector = joblib.load(os.path.join(PYTORCH_DIR, 'selector.joblib'))
-        print("Selector loaded")
         
         if model_type == 'manual':
-            scaler_path = os.path.join(PYTORCH_DIR, 'scaler.joblib')
-            print(f"Loading manual scaler from {scaler_path}...")
-            scaler = joblib.load(scaler_path)
-            print("Manual scaler loaded")
+            scaler = joblib.load(os.path.join(PYTORCH_DIR, 'scaler.joblib'))
             input_dim = len(selector.get_support(indices=True))
             model = PeptideNet(input_dim)
             model.load_state_dict(torch.load(os.path.join(PYTORCH_DIR, 'peptide_predictor_pytorch.pt'), map_location='cpu'))
-            print("Manual model weights loaded")
         
         elif model_type == 'esm':
             # ESM only model
             model = ESMToPLDDT(embedding_dim=320)
             model.load_state_dict(torch.load(os.path.join(ESM_DIR, 'esm_plddt_model.pt'), map_location='cpu'))
             scaler = None # ESM embeddings are usually self-normalized or raw
-            print("ESM model resources loaded")
             
         elif model_type == 'hybrid':
             # Hybrid model (Manual + ESM)
             scaler = joblib.load(os.path.join(HYBRID_DIR, 'hybrid_scaler.joblib'))
-            print("Hybrid scaler loaded")
             manual_dim = len(selector.get_support(indices=True))
             model = HybridPeptideNet(manual_dim, 320)
             model.load_state_dict(torch.load(os.path.join(HYBRID_DIR, 'hybrid_plddt_model.pt'), map_location='cpu'))
-            print("Hybrid model weights loaded")
         
         model.eval()
         return model, encoder, selector, scaler
     except Exception as e:
         st.error(f"Error loading {model_type} model resources: {e}")
-        import traceback
-        print(f"Traceback for {model_type} error:")
-        traceback.print_exc()
         return None, None, None, None
 
 def calculate_properties(sequence):
