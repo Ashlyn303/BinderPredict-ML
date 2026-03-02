@@ -1,9 +1,8 @@
 # Peptide pLDDT Predictor - Machine Learning Pipeline
 
-## 🚀 **[Try the Interactive Dashboard!](https://binderpredict-ml-ew5epm7u2xgktmbrjescvd.streamlit.app/)**
-**Screen and predict peptide pLDDT scores in real-time with our live Binder Predictor app.**
+## 🚀 **[Try the Interactive Dashboard!](https://binderpredict-ml-ew5epm7u2xgktmbrjescvd.streamlit.app/)** [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://binderpredict-ml-ew5epm7u2xgktmbrjescvd.streamlit.app/)
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://binderpredict-ml-ew5epm7u2xgktmbrjescvd.streamlit.app/)
+**Screen and predict peptide pLDDT scores in real-time with our live Binder Predictor app.**
 
 ---
 
