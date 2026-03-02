@@ -1,6 +1,6 @@
 # Peptide pLDDT Predictor - Machine Learning Pipeline
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://binderpredict-ml.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://binderpredict-ml-ew5epm7u2xgktmbrjescvd.streamlit.app/)
 
 This repository contains a professional-grade Deep Learning pipeline for predicting peptide pLDDT scores using PyTorch. The model migrates from a traditional linear regression approach to a Multi-Layer Perceptron (MLP) architecture, incorporating advanced optimization, interpretability, and diagnostic tools.
 
